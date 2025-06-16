@@ -5,29 +5,29 @@
  * @n: The integer to print
  * Return: Number of characters printed
  */
-int print_number(int n)
+int _strlen(const char *str)
 {
-    int count = 0;
-    unsigned int num;
+	int i;
 
-    if (n < 0)
-    {
-        write(1, "-", 1);
-        count++;
-        num = -n;
-    }
-    else
-    {
-        num = n;
-    }
+	for (i = 0; str[i] != 0; i++)
+		;
 
-    if (num / 10)
-        count += print_number(num / 10);
-
-    char digit = (num % 10) + '0';
-    write(1, &digit, 1);
-    count++;
-
-    return count;
+	return (i);
 }
 
+/**
+ * print - print char.
+ * @str: string.
+ *
+ * Return: string length.
+ */
+
+int print(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; ++i)
+		_putchar(str[i]);
+
+	return (i);
+}
