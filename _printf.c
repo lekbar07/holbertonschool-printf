@@ -1,10 +1,5 @@
 #include "main.h"
 
-/**
- * _printf - A simplified printf implementation
- * @format: The format string
- * Return: Number of characters printed
- */
 int _printf(const char *format, ...)
 {
     va_list args;
@@ -41,6 +36,10 @@ int _printf(const char *format, ...)
                 case '%':
                     write(1, "%", 1);
                     count++;
+                    break;
+                case 'd':
+                case 'i':
+                    count += print_number(va_arg(args, int));
                     break;
                 default:
                     write(1, "%", 1);

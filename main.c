@@ -2,10 +2,10 @@
 
 int main(void)
 {
-    _printf("I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life\n");
-    _printf("Character: %c\n", 'S');
-    _printf("String: %s\n", "Go Spurs Go!");
-    _printf("Percentage: %%\n");
+    _printf("Integer: %d\n", 2025);
+    _printf("Negative: %i\n", -42);
+    _printf("Zero: %d\n", 0);
+    _printf("Mix: %d, %s, %c, %%\n", 100, "hello", 'A');
     return 0;
 }
 
