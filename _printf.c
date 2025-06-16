@@ -1,17 +1,22 @@
 #include "main.h"
 
+/**
+ * _printf - Custom printf function
+ * @format: format string
+ * Return: number of characters printed
+ */
 int _printf(const char *format, ...)
 {
     va_list args;
     int i = 0, count = 0;
-    char c, *str;
+    char *str, c;
 
     if (!format)
         return (-1);
 
     va_start(args, format);
 
-    while (format && format[i])
+    while (format[i])
     {
         if (format[i] == '%' && format[i + 1])
         {
